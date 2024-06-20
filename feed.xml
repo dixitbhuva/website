@@ -3,12 +3,24 @@
     <title>dixit.dev</title>
     <link href="https://dixit.dev/feed.xml" rel="self" />
     <link href="https://dixit.dev" />
-    <updated>2024-06-20T07:17:45+05:30</updated>
+    <updated>2024-06-20T07:23:16+05:30</updated>
     <author>
         <name>Dixit Bhuva</name>
     </author>
     <id>https://dixit.dev</id>
 
+    <entry>
+        <title>test 3</title>
+        <author>
+            <name>Dixit Bhuva</name>
+        </author>
+        <link href="https://dixit.dev/test-3.html"/>
+        <id>https://dixit.dev/test-3.html</id>
+
+        <updated>2024-06-20T07:23:16+05:30</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Test 2</title>
         <author>
