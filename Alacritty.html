@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solved: Alacritty Terminal Input Problems on Windows</title>
+    <meta name="description" content="For some reasons alacritty didn't sending space key as input when using as a leader key (ex. space + ps, space + ff). Here a fix i find for windows.">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <h1 class="title">Alacritty Windows Input Fix</h1>
+    <p>In Windows, I use wsl (windows subsystem for linux) inside alacritty. I set space key as leader key in some programs (ex. neovim, tmux). but for some reasons alacritty didn't sending space key as input when using as a leader key (ex. space + ps, space + ff). Here a fix i find for windows. put this code into your config file.</p>
+    <p class="code">[keyboard]<br>bindings = [{ key = "Space", mods = "Control", chars = "\u0000"}]</p>
+    <h2>Rest of the config file:</h2>
+    <p>Alacritty doesn't create the config file for you, but it looks for one in the following locations:</p>
+    <ul>
+        <li>$XDG_CONFIG_HOME/alacritty/alacritty.toml</li>
+        <li>$XDG_CONFIG_HOME/alacritty.toml</li>
+        <li>$HOME/.config/alacritty/alacritty.toml</li>
+        <li>$HOME/.alacritty.toml</li>
+    </ul>
+    <p>On Windows, the config file will be looked for in:</p>
+    <ul>
+        <li>%APPDATA%\alacritty\alacritty.toml</li>
+    </ul>
+    <p class="code">
+        [font]<br>
+        size = 16.00<br>
+        normal = { family = "JetBrainsMono Nerd Font", style = "Regular"}<br>
+        bold = { family = "JetBrainsMono Nerd Font", style = "Bold"}<br>
+        italic = { family = "JetBrainsMono Nerd Font", style = "Italic"}<br>
+        bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic"}<br>
+    <br>
+        [window]<br>
+        dimensions = { columns = 72, lines = 28 }<br>
+    <br>
+        [cursor]<br>
+        style = { shape = "Block", blinking = "Never" }<br>
+    <br>
+        #Windows Fix<br>
+        [keyboard]<br>
+        bindings = [{ key = "Space", mods = "Control", chars = "\u0000"}]<br>
+    <br>
+        # Default colors<br>
+        [colors.primary]<br>
+        background = '#1a1b26'<br>
+        foreground = '#a9b1d6'<br>
+    <br>
+        # Normal colors<br>
+        [colors.normal]<br>
+        black = '#32344a'<br>
+        red = '#f7768e'<br>
+        green = '#9ece6a'<br>
+        yellow = '#e0af68'<br>
+        blue = '#7aa2f7'<br>
+        magenta = '#ad8ee6'<br>
+        cyan = '#449dab'<br>
+        white = '#787c99'<br>
+    <br>
+        # Bright colors<br>
+        [colors.bright]<br>
+        black = '#444b6a'<br>
+        red = '#ff7a93'<br>
+        green = '#b9f27c'<br>
+        yellow = '#ff9e64'<br>
+        blue = '#7da6ff'<br>
+        magenta = '#bb9af7'<br>
+        cyan = '#0db9d7'<br>
+        white = '#acb0d0'<br>
+    </p>
+    </body>
+    </html>
