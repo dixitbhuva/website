@@ -24,49 +24,56 @@
         <li>%APPDATA%\alacritty\alacritty.toml</li>
     </ul>
     <p class="code">
-        [font]<br>
-        size = 16.00<br>
-        normal = { family = "JetBrainsMono Nerd Font", style = "Regular"}<br>
-        bold = { family = "JetBrainsMono Nerd Font", style = "Bold"}<br>
-        italic = { family = "JetBrainsMono Nerd Font", style = "Italic"}<br>
-        bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic"}<br>
-    <br>
-        [window]<br>
-        dimensions = { columns = 72, lines = 28 }<br>
-    <br>
-        [cursor]<br>
-        style = { shape = "Block", blinking = "Never" }<br>
-    <br>
-        #Windows Fix<br>
-        [keyboard]<br>
-        bindings = [{ key = "Space", mods = "Control", chars = "\u0000"}]<br>
-    <br>
-        # Default colors<br>
-        [colors.primary]<br>
-        background = '#1a1b26'<br>
-        foreground = '#a9b1d6'<br>
-    <br>
-        # Normal colors<br>
-        [colors.normal]<br>
-        black = '#32344a'<br>
-        red = '#f7768e'<br>
-        green = '#9ece6a'<br>
-        yellow = '#e0af68'<br>
-        blue = '#7aa2f7'<br>
-        magenta = '#ad8ee6'<br>
-        cyan = '#449dab'<br>
-        white = '#787c99'<br>
-    <br>
-        # Bright colors<br>
-        [colors.bright]<br>
-        black = '#444b6a'<br>
-        red = '#ff7a93'<br>
-        green = '#b9f27c'<br>
-        yellow = '#ff9e64'<br>
-        blue = '#7da6ff'<br>
-        magenta = '#bb9af7'<br>
-        cyan = '#0db9d7'<br>
-        white = '#acb0d0'<br>
+[shell]<br>
+program = "wsl"<br>
+<br>
+[window]<br>
+dimensions = { columns = 120, lines = 30 }<br>
+decorations = "None"<br>
+padding = { x = 5, y = 5 }<br>
+position = { x = 50, y = 5 }<br>
+<br>
+[font]<br>
+size = 16.00<br>
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }<br>
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold"}<br>
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic"}<br>
+bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic"}<br>
+<br>
+[cursor]<br>
+style = { shape = "Block", blinking = "Never" }<br>
+<br>
+#Windows Fix<br>
+[keyboard]<br>
+bindings = [{ key = "Space", mods = "Control", chars = "\u0000"}]<br>
+<br>
+# Default colors<br>
+[colors.primary]<br>
+background = '#1a1b26'<br>
+foreground = '#a9b1d6'<br>
+<br>
+# Normal colors<br>
+[colors.normal]<br>
+black = '#32344a'<br>
+red = '#f7768e'<br>
+green = '#9ece6a'<br>
+yellow = '#e0af68'<br>
+blue = '#7aa2f7'<br>
+magenta = '#ad8ee6'<br>
+cyan = '#449dab'<br>
+white = '#787c99'<br>
+<br>
+# Bright colors<br>
+[colors.bright]<br>
+black = '#444b6a'<br>
+red = '#ff7a93'<br>
+green = '#b9f27c'<br>
+yellow = '#ff9e64'<br>
+blue = '#7da6ff'<br>
+magenta = '#bb9af7'<br>
+cyan = '#0db9d7'<br>
+white = '#acb0d0'<br>
+<br>
     </p>
     </body>
     </html>
